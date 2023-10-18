@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', event => {
-    async() => {
+    (async() => {
       let device
       
       try {
@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', event => {
         console.log(error)
       }
         await device.close()
-    }
+    })()
   })
