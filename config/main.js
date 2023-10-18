@@ -7,9 +7,9 @@ require(['vs/editor/editor.main'], function () {
 	var val = cacheGet()
 	var editor = monaco.editor.create(document.getElementById('container'), {
 		value: val,
-		language: 'python'
+		language: 'micropython'
 	});
-	/*monaco.languages.registerCompletionItemProvider('python', {
+	/*monaco.languages.registerCompletionItemProvider('micropython', {
 		provideCompletionItems: (model, position) => {
 			const keywords = [["gl.SendMessage","gl.SendMessage()"],["gl.OnMessage","gl.OnMessage((data) => {code ex:data.val().message})"],["gl.OnSendMessage","gl.OnSendMessage(() => {code ex:data.val().message})"],["gl.StopSendMessage","gl.StopSendMessage()"]]
 			const suggestions = keywords.map(keyword => ({
