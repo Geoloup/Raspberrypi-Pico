@@ -1,8 +1,5 @@
 async function serialMain() {
-    var ports = await navigator.serial.getPorts();
-    if (ports == []) {
-        var port = await navigator.serial.requestPort();
-    }
+    var port = await navigator.serial.requestPort();
     await port.open({ baudRate: 9600 /* pick your baud rate */ });
 
     if (port.readable) {
