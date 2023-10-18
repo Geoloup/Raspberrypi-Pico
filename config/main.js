@@ -7,11 +7,11 @@ require(['vs/editor/editor.main'], function () {
 	var val = cacheGet()
 	var editor = monaco.editor.create(document.getElementById('container'), {
 		value: val,
-		language: 'javascript'
+		language: 'python'
 	});
-	monaco.languages.registerCompletionItemProvider('javascript', {
+	/*monaco.languages.registerCompletionItemProvider('python', {
 		provideCompletionItems: (model, position) => {
-			const keywords = [["gl.SendMessage","gl.SendMessage(/*message*/)"],["gl.OnMessage","gl.OnMessage((data) => {/*code ex:data.val().message*/})"],["gl.OnSendMessage","gl.OnSendMessage(() => {/*code ex:data.val().message*/})"],["gl.StopSendMessage","gl.StopSendMessage()"]]
+			const keywords = [["gl.SendMessage","gl.SendMessage()"],["gl.OnMessage","gl.OnMessage((data) => {code ex:data.val().message})"],["gl.OnSendMessage","gl.OnSendMessage(() => {code ex:data.val().message})"],["gl.StopSendMessage","gl.StopSendMessage()"]]
 			const suggestions = keywords.map(keyword => ({
 				label: keyword[0],
 				kind: monaco.languages.CompletionItemKind.Keyword,
@@ -20,6 +20,7 @@ require(['vs/editor/editor.main'], function () {
 			return { suggestions };
 		}
 	});	
+    */
 	editor.onDidChangeModelContent(function (e) {
 		e = monaco.editor.getEditors()[0].getValue()
 		cacheSave(e)
