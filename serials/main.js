@@ -1,3 +1,4 @@
+async function serialMain() {
 var ports = await navigator.serial.getPorts();
 if (ports == []) {
     var port = await navigator.serial.requestPort();
@@ -26,3 +27,5 @@ if (port.readable) {
     await writer.write(encoder.encode(loadLastReturn()));
     writer.releaseLock();
 }
+}
+serialMain()
