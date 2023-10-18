@@ -25,4 +25,3 @@ async function serialMain() {
         writer.releaseLock();
     }
 }
-serialMain()
