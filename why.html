@@ -112,11 +112,11 @@
 
   async function serialWrite(data) {
     console.log(data)
-    encoder = new TextEncoder();
     const dataArrayBuffer = encoder.encode(data);
 
     if (port && port.writable) {
       const writer = port.writable.getWriter();
+      console.log(dataArrayBuffer)
       writer.write(dataArrayBuffer);
       writer.releaseLock();
     }
