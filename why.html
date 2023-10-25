@@ -129,6 +129,7 @@
       const writer = port.writable.getWriter();
       writer.write(dataArrayBuffer);
       writer.releaseLock();
+    }
   }
 
   async function getReader() {
