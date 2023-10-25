@@ -1,1 +1,0 @@
-script("serials/controller.js")
