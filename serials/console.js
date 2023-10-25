@@ -91,6 +91,7 @@ async function getReader() {
   await port.open({ baudRate: [speed] });
 
   document.getElementById('SerialSpeed').disabled = true;
+  document.getElementById('RunButton').disabled = false;
   window.connect = true
 
   connectButton.innerText = 'Disconnect';
