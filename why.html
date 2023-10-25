@@ -111,6 +111,7 @@
   let latestValue = 0;
 
   async function serialWrite(data) {
+    console.log(data)
     encoder = new TextEncoder();
     const dataArrayBuffer = encoder.encode(data);
 
