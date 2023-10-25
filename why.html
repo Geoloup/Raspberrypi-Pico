@@ -121,6 +121,15 @@
       writer.releaseLock();
     }
   }
+  async function SerialWriteD(d) {
+    const dataArrayBuffer = new Uint8Array(d)
+    console.log(dataArrayBuffer)
+
+    if (port && port.writable) {
+      const writer = port.writable.getWriter();
+      writer.write(dataArrayBuffer);
+      writer.releaseLock();
+  }
 
   async function getReader() {
     port = await navigator.serial.requestPort({});
