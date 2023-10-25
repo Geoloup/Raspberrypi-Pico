@@ -91,6 +91,7 @@ async function getReader() {
   await port.open({ baudRate: [speed] });
 
   document.getElementById('SerialSpeed').disabled = true;
+  window.connect = true
 
   connectButton.innerText = 'Disconnect';
   term.write('\x1b[31mConnected using Web Serial API !\x1b[m\r\n');
