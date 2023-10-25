@@ -121,10 +121,8 @@
       writer.releaseLock();
     }
   }
-  async function SerialWriteD(d) {
-    var df = new Uint8Array()
-    df[0] = d 
-    const dataArrayBuffer = df
+  async function SerialWriteEnter(d) {
+    const dataArrayBuffer = d
     console.log(dataArrayBuffer)
 
     if (port && port.writable) {
