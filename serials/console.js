@@ -92,6 +92,7 @@ async function getReader() {
 
     document.getElementById('SerialSpeed').disabled = true;
     document.getElementById('RunButton').disabled = false;
+    document.getElementById('ConsoleButton').disabled = false;
     window.connect = true
 
     connectButton.innerText = 'Disconnect';
