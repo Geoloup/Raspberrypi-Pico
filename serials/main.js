@@ -3,13 +3,16 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         console.log("Hi")
         save()
         SerialWriteCustom(3)
-        compile(loadLastReturn()).split("\n").forEach(command => {
+        for (i in compile(loadLastReturn()).split("\n")) {
+            var command = compile(loadLastReturn()).split("\n")[i]
             SerialWriteCustom(13)
             serialWrite(command)
-            if (command.slice(0,4) != "    " || command.replaceAll(" ","").slice(0,5) != "while" || compile(loadLastReturn()).split("\n").reverse()[0] == command) {
+            if ((command.slice(0,4) != "    " && compile(loadLastReturn()).split("\n")[i+1].slice(0,4) != "    ") && command.replaceAll(" ","").slice(0,5) != "while" || compile(loadLastReturn()).split("\n").reverse()[0] == command) {
                 SerialWriteCustom(13)
                 SerialWriteCustom(13)
             }
+        }
+        compile(loadLastReturn()).split("\n").forEach(command => {
         });
         SerialWriteCustom(13)
     }
