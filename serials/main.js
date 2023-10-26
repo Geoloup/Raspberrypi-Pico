@@ -6,6 +6,7 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         compile(loadLastReturn()).split("\n").forEach(command => {
             SerialWriteCustom(13)
             serialWrite(command)
+            SerialWriteCustom(13)
         });
         SerialWriteCustom(13)
     }
