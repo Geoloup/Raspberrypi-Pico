@@ -5,8 +5,11 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         SerialWriteCustom(3)
         compile(loadLastReturn()).split("\n").forEach(command => {
             SerialWriteCustom(13)
-            if (command.slice(0,4) == "    ")
             serialWrite(command)
+            if (command.slice(0,4) != "    ") {
+                SerialWriteCustom(13)
+
+            }
         });
         SerialWriteCustom(13)
     }
