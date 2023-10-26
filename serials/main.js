@@ -3,7 +3,10 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         console.log("Hi")
         save()
         SerialWriteCustom(3)
-        serialWrite(compile(loadLastReturn()))
+        compile(loadLastReturn()).split("\n").forEach(command => {
+            SerialWriteCustom(13)
+            serialWrite(command)
+        });
         SerialWriteCustom(13)
     }
 })
