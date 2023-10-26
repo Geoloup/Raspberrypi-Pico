@@ -10,7 +10,11 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
 document.getElementById("ConsoleButton").addEventListener("click",(event) => {
     if (window.connect) {
         console.log("Disaplying console")
-        document.getElementById("term").style.display = "block"
+        if (document.getElementById("term").style.display == "block") {
+            document.getElementById("term").style.display = "none"
+        } else {
+            document.getElementById("term").style.display = "block"
+        }
         document.getElementById("term").style.position = "fixed"
     }
 })
