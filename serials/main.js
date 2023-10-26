@@ -6,8 +6,8 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         compile(loadLastReturn()).split("\n").forEach(command => {
             SerialWriteCustom(13)
             serialWrite(command)
-            console.log(command.slice(0,4))
-            if (compile(loadLastReturn()).split("\n").reverse()[0] == command) {
+            console.log(command.slice(0,4) == "    ")
+            if (command.slice(0,4) != "    " || compile(loadLastReturn()).split("\n").reverse()[0] == command) {
                 SerialWriteCustom(13)
                 SerialWriteCustom(13)
             }
