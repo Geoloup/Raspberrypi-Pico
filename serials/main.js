@@ -7,9 +7,8 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
             SerialWriteCustom(13)
             serialWrite(command)
             console.log(command.slice(0,4))
-            if (command.slice(0,4) != "    ") {
+            if (command.slice(0,4) == "    ") {
                 SerialWriteCustom(13)
-
             }
         });
         SerialWriteCustom(13)
