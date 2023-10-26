@@ -17,7 +17,7 @@
         <h1>Gcod is loading</h1>
     </div>
     <script src="config/import.js"></script>
-    <div style="position: fixed;top:0px;width: 100vw;height: calc(3vh);">
+    <div style="position: fixed;top:0px;width: 100vw;height: calc(3vh);z-index: 11;">
         <script src="serials/controller.js"></script>
         <select name="speed" id="SerialSpeed">
             <option value="1200">1200</option>
@@ -33,6 +33,7 @@
         <div id="term" style="display:none"></div>
         <script src="serials/console.js"></script>
         <button id="RunButton" type="button" disabled>Run</button>
+        <button id="ConsoleButton" type="button" disabled>Console</button>
     </div>
     <div style="position: fixed; right: 0px;bottom: 0px;height:  calc(97vh - 1px);width: 100vw;">
         <div id="container" style="width: 100%;height: 100%;border:1px solid grey"></div>
