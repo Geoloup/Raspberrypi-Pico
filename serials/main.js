@@ -25,3 +25,6 @@ document.getElementById("ConsoleButton").addEventListener("click",(event) => {
         document.getElementById("term").style.position = "fixed"
     }
 })
+window.BeforeUnloadEvent = function(){
+    SerialWriteCustom(3)
+}

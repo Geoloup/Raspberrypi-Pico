@@ -31,13 +31,14 @@ let port;
 if ('serial' in navigator) {
     connectButton.addEventListener('click', function () {
         if (port) {
+            SerialWriteCustom(3)
             term.write('\x1b[31mDisconnected from Serial Port\x1b[m\r\n');
-            port.close();
             port = undefined;
             connectButton.innerText = 'Connect';
 
             document.getElementById('SerialSpeed').disabled = false;
-
+            term.close()
+            port.close();
         }
         else {
             connectButton.innerText = 'Disconnect';
