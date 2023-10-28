@@ -103,6 +103,9 @@ async function getReader() {
         write(chunk) {
             log(chunk)
             term.write(chunk);
+            if (window.SerialOutputS) {
+                SerialOutput(chunk)
+            }
         }
     });
 
@@ -116,3 +119,16 @@ async function getReader() {
     });
 
 }
+
+function SetSerialOutput() {
+    if (window.SerialOutputS) {
+        window.SerialOutputS = false
+    } else {
+        window.SerialOutputS = True
+    }
+}
+
+function SerialOutput(chunk) {
+
+}
+window.SerialOutputS = false

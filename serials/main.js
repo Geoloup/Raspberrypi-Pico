@@ -16,6 +16,7 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         SerialWriteCustom(13)
         serialWrite("main()")
         setTimeout(SerialWriteCustom,1000,3)
+        setTimeout(SetSerialOutput,1250)
         setTimeout(SerialWriteCustom,1500,13)
     }
 })
