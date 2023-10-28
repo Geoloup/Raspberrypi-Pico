@@ -124,11 +124,11 @@ function SetSerialOutput() {
     if (window.SerialOutputS) {
         window.SerialOutputS = false
     } else {
-        window.SerialOutputS = True
+        window.SerialOutputS = true
     }
 }
 
 function SerialOutput(chunk) {
-
+    console.log(chunk)
 }
 window.SerialOutputS = false
