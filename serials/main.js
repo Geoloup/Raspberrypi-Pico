@@ -2,6 +2,7 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
     if (window.connect) {
         console.log("Hi")
         save()
+        SerialWriteCustom(4)
         SerialWriteCustom(3)
         serialWrite("def main():")
         for (i in compile(loadLastReturn()).split("\n")) {
