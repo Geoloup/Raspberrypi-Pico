@@ -1,3 +1,8 @@
 body {
     margin:0px;
 }
+
+.terminal {
+    height: calc(97vh - 1px);
+    width:100%;
+}
