@@ -1,5 +1,6 @@
 document.getElementById("RunButton").addEventListener("click",(event) => {
     if (window.connect) {
+        document.getElementById("StopButton").disabled = false;
         console.log("Hi")
         save()
         SerialWriteCustom(4)
