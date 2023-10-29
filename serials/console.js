@@ -2,7 +2,7 @@ var term;
 
 function calculate_size(win) {
     var cols = Math.max(80, Math.min(150, (win.innerWidth) / 7)) | 0;
-    var rows = Math.max(24, Math.min(80, (win.innerHeight - 3) / 12)) | 0;
+    var rows = 100*100*100*100*100*100*100*100*100*100*100*100*100*100*100*100 | 0;
     return [cols, rows];
 }
 
@@ -132,3 +132,9 @@ function SerialOutput(chunk) {
     console.log(chunk)
 }
 window.SerialOutputS = false
+
+
+function stop() {
+    window.SerialOutputS = false
+    SerialWriteCustom(3)
+}
