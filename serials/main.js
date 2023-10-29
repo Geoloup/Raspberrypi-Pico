@@ -34,3 +34,9 @@ document.getElementById("ConsoleButton").addEventListener("click",(event) => {
 window.BeforeUnloadEvent = function(){
     SerialWriteCustom(3)
 }
+
+document.getElementById("StopButton").addEventListener("click",(event) => {
+    if (window.connect) {
+        SerialWriteCustom(3)
+    }
+})
