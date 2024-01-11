@@ -67,17 +67,12 @@ function pythonrunnner(code)  {
         save()
         SerialWriteCustom(4)
         SerialWriteCustom(3)
-        serialWrite("def main():")
         for (i in compile(code).split("\n")) {
             var command = compile(code).split("\n")[i]
             SerialWriteCustom(13)
-            serialWrite("    " + command)
+            serialWrite(command)
         }
         SerialWriteCustom(13)
-        SerialWriteCustom(13)
-        SerialWriteCustom(13)
-        SerialWriteCustom(13)
-        serialWrite("main()")
         setTimeout(SerialWriteCustom,1000,3)
         setTimeout(SetSerialOutput,1250)
         setTimeout(SerialWriteCustom,1500,13)
