@@ -49,3 +49,37 @@ function cacheGet() {
         return "// ic-hat extention editor"
     }
 }
+
+function flashsave() {
+    save()
+    var flashvalue = loadLastReturn()
+    var flashingcode = `open('last.py').write(open('main.py','r').read())`
+    pythonrunnner(flashingcode)
+    var flashingcode = `open('pythonrunner.py').write(${flashvalue})`    
+    pythonrunnner(flashingcode)
+    var flashingcode = `open('main.py').write('import pythonrunner')`    
+    pythonrunnner(flashingcode)
+}
+
+function pythonrunnner(code)  {
+    if (window.connect) {
+        document.getElementById("StopButton").disabled = false;
+        save()
+        SerialWriteCustom(4)
+        SerialWriteCustom(3)
+        serialWrite("def main():")
+        for (i in compile(code).split("\n")) {
+            var command = compile(code).split("\n")[i]
+            SerialWriteCustom(13)
+            serialWrite("    " + command)
+        }
+        SerialWriteCustom(13)
+        SerialWriteCustom(13)
+        SerialWriteCustom(13)
+        SerialWriteCustom(13)
+        serialWrite("main()")
+        setTimeout(SerialWriteCustom,1000,3)
+        setTimeout(SetSerialOutput,1250)
+        setTimeout(SerialWriteCustom,1500,13)
+    }
+}

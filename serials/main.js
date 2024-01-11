@@ -41,3 +41,9 @@ document.getElementById("StopButton").addEventListener("click",(event) => {
         SerialWriteCustom(3)
     }
 })
+
+document.getElementById("SaveButton").addEventListener("click",(event) => {
+    if (window.connect) {
+        flashsave()
+    }
+})
