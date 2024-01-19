@@ -15,29 +15,29 @@
         <h1>RP controller is loding</h1>
     </div>
     <script src="config/import.js"></script>
-    <div style="position: fixed;top:0px;width: 100vw;height: calc(3vh);z-index: 11;">
-        <script src="serials/controller.js"></script>
-        <select name="speed" id="SerialSpeed">
-            <option value="1200">1200</option>
-            <option value="2400">2400</option>
-            <option value="4800">4800</option>
-            <option value="9600">9600</option>
-            <option value="19200">19200</option>
-            <option value="38400">38400</option>
-            <option value="57600">57600</option>
-            <option value="115200">115200</option>
-        </select>
-        <button id="SerialConnectButton" type="button" disabled>Connect to raspberry pico</button>
-        <div id="term" style="display:none"></div>
-        <script src="serials/console.js"></script>
-        <button id="RunButton" type="button" disabled>Run</button>
-        <button id="StopButton" type="button" disabled>Stop</button>
-        <button id="ConsoleButton" type="button" disabled>Console</button>
-        <button id="SaveButton" type="button" disabled>Save file to rp pico path : main.py</button>
-    </div>
-    <div style="position: fixed; right: 0px;bottom: 0px;height:  calc(97vh - 1px);width: 100vw;">
-        <div id="container" style="width: 100%;height: 100%;border:1px solid grey"></div>
-    </div>
+        <nav>
+            <select name="speed" id="SerialSpeed">
+                <option value="1200">1200</option>
+                <option value="2400">2400</option>
+                <option value="4800">4800</option>
+                <option value="9600">9600</option>
+                <option value="19200">19200</option>
+                <option value="38400">38400</option>
+                <option value="57600">57600</option>
+                <option value="115200">115200</option>
+            </select>
+            <button id="SerialConnectButton" type="button" disabled>Connect to raspberry pico</button>
+            <div id="term" style="display:none"></div>
+            <script src="serials/console.js"></script>
+            <button id="RunButton" type="button" disabled>Run</button>
+            <button id="StopButton" type="button" disabled>Stop</button>
+            <button id="ConsoleButton" type="button" disabled>Console</button>
+            <button id="SaveButton" type="button" disabled>Save file to rp pico path : main.py</button>
+              </nav>
+          <editor>
+            <div id="container" style="width: 100%;height: 100%;border:1px solid grey"></div>
+          </editor>
+<script src="serials/controller.js"></script>
     <script src="main.js"></script>
 </body>
 

@@ -6,3 +6,65 @@ body {
     height: calc(97vh - 1px);
     width:100%;
 }
+body {
+    margin:0px;  
+      background-size: 1500px;
+      background-position: center;
+      background-image: url(https://www.raspberrypi.com/app/uploads/2024/01/raspberry-pi-5-xray-black-jeff-geerling-1024x651.jpg);
+  }
+  nav {
+    display:flex;
+    margin:4px;
+    border-radius:5px;
+    background:black;
+    padding:5px;
+    justify-content:center;
+    align-items:center;
+  }
+  nav button{
+    background:#252525;
+    border:white 1px;
+    border-radius:5px;
+    margin-right:5px;
+    margin-left:5px;
+    color:white;
+    font-size:20px;
+  }
+  
+  editor {
+    display:block;
+    margin-left:1vw;
+    margin-right:1vw;
+    margin-top:1vh;
+    margin-bottom:1vh;
+    height:91.5vh;
+    width:98vw;
+    overflow: auto;
+    background:black;
+    color:white;
+    border-radius:5px;
+    border:none;
+    display:flex;
+  }
+  #editor {
+      overflow-wrap: unset;
+      line-break: unset;
+      white-space: nowrap;
+      width:95vw;
+  }
+  #editor:focus-visible {
+    border:none;
+    outline:none;
+  }
+  .editorLines {
+    color:White;
+  }
+  #line-numbers {
+    min-width:1vw;
+    margin-right:1vw;
+  }
+  line-number { 
+    display: inline-block; width: 2vw;
+    text-align: right;
+    margin-right: 0.5em;
+  }
