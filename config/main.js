@@ -9,7 +9,8 @@ require(['vs/editor/editor.main'], function () {
 		value: val,
 		language: 'python',
 		maxLineCount:100,
-		automaticLayout:true
+		automaticLayout:true,
+		theme:'vs-dark'
 	});
 	/*monaco.languages.registerCompletionItemProvider('micropython', {
 		provideCompletionItems: (model, position) => {
