@@ -1,70 +1,143 @@
 body {
-    margin:0px;
+    margin: 0px;
 }
 
 .terminal {
     height: calc(97vh - 1px);
-    width:100%;
+    width: 100%;
 }
+
 body {
-    margin:0px;  
-      background-size: 1500px;
-      background-position: center;
-      background-image: url(https://www.raspberrypi.com/app/uploads/2024/01/raspberry-pi-5-xray-black-jeff-geerling-1024x651.jpg);
-  }
-  nav {
-    display:flex;
-    margin:4px;
-    border-radius:5px;
-    background:black;
-    padding:5px;
-    justify-content:center;
-    align-items:center;
-  }
-  nav button{
-    background:#252525;
-    border:white 1px;
-    border-radius:5px;
-    margin-right:5px;
-    margin-left:5px;
-    color:white;
-    font-size:20px;
-  }
-  
-  editor {
-    display:block;
-    margin-left:1vw;
-    margin-right:1vw;
-    margin-top:1vh;
-    margin-bottom:1vh;
-    height:91.5vh;
-    width:98vw;
+    margin: 0px;
+    background-size: 1500px;
+    background-position: center;
+    background-image: url(https://www.raspberrypi.com/app/uploads/2024/01/raspberry-pi-5-xray-black-jeff-geerling-1024x651.jpg);
+}
+
+nav {
+    display: flex;
+    margin: 4px;
+    border-radius: 5px;
+    background: black;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav button {
+    background: #252525;
+    border: white 1px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+editor {
+    display: block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    height: 91.5vh;
+    width: 98vw;
     overflow: auto;
-    background:black;
-    color:white;
-    border-radius:5px;
-    border:none;
-    display:flex;
-  }
-  #editor {
-      overflow-wrap: unset;
-      line-break: unset;
-      white-space: nowrap;
-      width:95vw;
-  }
-  #editor:focus-visible {
-    border:none;
-    outline:none;
-  }
-  .editorLines {
-    color:White;
-  }
-  #line-numbers {
-    min-width:1vw;
-    margin-right:1vw;
-  }
-  line-number { 
-    display: inline-block; width: 2vw;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+}
+
+#editor {
+    overflow-wrap: unset;
+    line-break: unset;
+    white-space: nowrap;
+    width: 95vw;
+}
+
+#editor:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.editorLines {
+    color: White;
+}
+
+#line-numbers {
+    min-width: 1vw;
+    margin-right: 1vw;
+}
+
+line-number {
+    display: inline-block;
+    width: 2vw;
     text-align: right;
     margin-right: 0.5em;
-  }
+}
+
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+.select-selected {
+    background-color: rgb(117, 117, 117);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: rgb(51, 51, 51);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}

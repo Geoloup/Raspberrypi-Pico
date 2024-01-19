@@ -1,3 +1,4 @@
+script("config/selector.js")
 script("config/log.js")
 script("config/compile.js")
 script("config/save.js")

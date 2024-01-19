@@ -16,16 +16,18 @@
     </div>
     <script src="config/import.js"></script>
         <nav>
-            <select name="speed" id="SerialSpeed">
-                <option value="1200">1200</option>
-                <option value="2400">2400</option>
-                <option value="4800">4800</option>
-                <option value="9600">9600</option>
-                <option value="19200">19200</option>
-                <option value="38400">38400</option>
-                <option value="57600">57600</option>
-                <option value="115200">115200</option>
-            </select>
+            <div class="custom-select">
+                <select name="speed" id="SerialSpeed">
+                    <option value="1200">1200</option>
+                    <option value="2400">2400</option>
+                    <option value="4800">4800</option>
+                    <option value="9600">9600</option>
+                    <option value="19200">19200</option>
+                    <option value="38400">38400</option>
+                    <option value="57600">57600</option>
+                    <option value="115200">115200</option>
+                </select>
+            </div>
             <button id="SerialConnectButton" type="button" disabled>Connect to raspberry pico</button>
             <div id="term" style="display:none"></div>
             <script src="serials/console.js"></script>
