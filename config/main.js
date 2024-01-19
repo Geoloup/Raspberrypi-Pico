@@ -7,7 +7,9 @@ require(['vs/editor/editor.main'], function () {
 	var val = cacheGet()
 	var editor = monaco.editor.create(document.getElementById('container'), {
 		value: val,
-		language: 'micropython'
+		language: 'python',
+		maxLineCount:100,
+		automaticLayout:true;
 	});
 	/*monaco.languages.registerCompletionItemProvider('micropython', {
 		provideCompletionItems: (model, position) => {
