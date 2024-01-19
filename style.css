@@ -34,6 +34,12 @@ nav button {
     font-size: 20px;
 }
 
+
+nav button:disabled {
+    display:none;
+    visibility: hidden;
+}
+
 editor {
     display: block;
     margin-left: 1vw;
@@ -115,7 +121,7 @@ line-number {
 .select-items div,
 .select-selected {
     color: #ffffff;
-    padding: 8px 16px;
+    padding: 8px 24px;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
@@ -140,4 +146,9 @@ line-number {
 .select-items div:hover,
 .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+#term {
+    top: 6vh!important;
+    z-index: 1 !important;
 }

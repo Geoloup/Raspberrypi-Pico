@@ -1,8 +1,8 @@
 var term;
 
 function calculate_size(win) {
-    var cols = Math.max(80, Math.min(150, (win.innerWidth) / 1.5)) | 0;
-    var rows = Math.max(24, Math.min(80, (win.innerHeight) / 20)) | 0;
+    var cols = Math.max(80, Math.min(150, (win.innerWidth) / 1)) | 0;
+    var rows = Math.max(24, Math.min(80, (win.innerHeight) / 22)) | 0;
     return [cols, rows];
 }
 
