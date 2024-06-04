@@ -44,9 +44,9 @@ function cacheGet() {
     if (last != undefined) {
         return last
     } else if (last != "" && last != " ") {
-        return "// ic-hat extention editor"
+        return "// Rp pico serial extention editor"
     } else {
-        return "// ic-hat extention editor"
+        return "// Rp pico serial extention editor"
     }
 }
 
