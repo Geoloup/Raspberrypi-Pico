@@ -46,7 +46,7 @@ editor {
     margin-right: 1vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
-    height: 91.5vh;
+    height: calc(94.5vh - 31px);;
     width: 98vw;
     overflow: auto;
     background: black;
