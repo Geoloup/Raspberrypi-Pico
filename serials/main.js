@@ -3,7 +3,6 @@ document.getElementById("RunButton").addEventListener("click",(event) => {
         document.getElementById("StopButton").disabled = false;
         console.log("Hi")
         save()
-        SerialWriteCustom(4)
         SerialWriteCustom(3)
         serialWrite("def main():")
         for (i in compile(loadLastReturn()).split("\n")) {
