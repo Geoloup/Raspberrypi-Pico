@@ -65,7 +65,6 @@ function pythonrunnner(code)  {
     if (window.connect) {
         document.getElementById("StopButton").disabled = false;
         save()
-        SerialWriteCustom(4)
         SerialWriteCustom(3)
         for (i in compile(code).split("\n")) {
             var command = compile(code).split("\n")[i]
